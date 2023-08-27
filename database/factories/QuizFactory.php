@@ -15,6 +15,7 @@ class QuizFactory extends Factory
     public function definition(): array
     {
         return [
+            'title' => $this->faker->words(rand(5, 15), true),
             'question_limit' => 7,
             'mark_per_question' => 1,
             'pass_mark' => 5,

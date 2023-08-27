@@ -21,6 +21,7 @@ class QuestionFactory extends Factory
     {
         return [
             'quiz_id' => 7,
+            'type' => 'multiple_choice',
             'text' => substr(str_replace('.', '', fake()->sentence(5)), 0, 25) . " ?",
             'is_active' => true,
         ];
@@ -34,7 +35,7 @@ class QuestionFactory extends Factory
 
             foreach ($options as $index => $option) {
                 $option->question_id = $question->id;
-                $option->remarks = ($index === $question->id % 4) ? 1 : 0;
+                $option->is_correct = ($index === $question->id % 4) ? 1 : 0;
                 $option->save();
             }
         });

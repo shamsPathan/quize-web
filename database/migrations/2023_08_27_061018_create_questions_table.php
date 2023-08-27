@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('quiz_id');
             $table->string('text');
+            $table->string('type');
             $table->string('is_active')->default(true)->nullable();
             $table->timestamps();
 

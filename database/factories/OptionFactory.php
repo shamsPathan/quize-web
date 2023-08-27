@@ -21,7 +21,7 @@ class OptionFactory extends Factory
         return [
             'question_id' => Question::inRandomOrder()->first()->id,
             'text' => fake()->sentence(3),
-            'remarks' => true,
+            'is_correct' => true,
         ];
     }
 }

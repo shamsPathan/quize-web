@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('quizzes', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
             $table->integer("question_limit")->default(7);
             $table->integer("mark_per_question")->default(1);
             $table->integer("pass_mark")->default(5);
